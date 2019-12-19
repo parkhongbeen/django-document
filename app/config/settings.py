@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'many_to_one.apps.ManyToOneConfig',
 
     'django_extensions',
+    'many_to_many.apps.ManyToManyConfig'
 ]
 
 MIDDLEWARE = [
