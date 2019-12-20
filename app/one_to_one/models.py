@@ -10,12 +10,13 @@ class Place(models.Model):
 
 class Restaurant(models.Model):
     place = models.OneToOneField(Place, verbose_name='장소', on_delete=models.CASCADE)
+    # instagram_user = models.ForeignKey(InstagramUser)
+    # instagram_user = models.ForeignKey('many_to_many.InstagramUser')
     name = models.CharField('식당옆', max_length=30)
     rating = models.IntegerField('평점', default=0)
 
     def __str__(self):
         return f'{self.name} (평점: {self.rating})'
-
 
 # class Shop(models.Model):
 #     TYPE_CHOICES = (
